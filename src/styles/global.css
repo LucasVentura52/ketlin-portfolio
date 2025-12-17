@@ -197,6 +197,10 @@ a { color: inherit; text-decoration: none; }
   place-items: center;
   background: rgba(61,49,51,.05);
 }
+.contact-icon {
+  font-size: 22px;
+  color: #b36a3c;
+}
 
 /* buttons */
 .btnrow { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
@@ -210,6 +214,11 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 18px;
   margin-top: 26px;
+}
+.service-icon {
+  font-size: 26px;
+  color: var(--v-theme-primary, #c58a5c);
+  display: inline-flex;
 }
 @media (max-width: 960px) {
   .services-grid { grid-template-columns: 1fr; }
@@ -226,4 +235,136 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 780px) {
   .portfolio-grid { grid-template-columns: 1fr; }
+}
+
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px) scale(0.99);
+  transition: opacity 0.45s cubic-bezier(.25, .9, .3, 1), transform 0.45s cubic-bezier(.25, .9, .3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal-text {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s cubic-bezier(.25, .9, .3, 1), transform 0.4s cubic-bezier(.25, .9, .3, 1);
+}
+.reveal-text.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-image {
+  opacity: 0;
+  transform: scale(0.94) rotate(-1.2deg);
+  transition: opacity 0.9s cubic-bezier(.25, .9, .3, 1), transform 0.9s cubic-bezier(.25, .9, .3, 1);
+}
+.reveal-image.is-visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible,
+  .reveal-text,
+  .reveal-text.is-visible,
+  .reveal-image,
+  .reveal-image.is-visible {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Posicione section (texto em cima no mobile) */
+#posicione .posicione-grid {
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+}
+@media (max-width: 960px) {
+  #posicione .posicione-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+  }
+  #posicione .posicione-text {
+    order: 1;
+    text-align: center;
+    max-width: 640px;
+  }
+  #posicione .posicione-image {
+    order: 2;
+    width: 100%;
+    justify-content: center !important;
+  }
+  #posicione .arch {
+    width: min(360px, 90vw) !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 999px !important;
+  }
+}
+
+/* Encante section (texto em cima no mobile) */
+#encante .encante-grid {
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+}
+@media (max-width: 960px) {
+  #encante .encante-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+  }
+  #encante .encante-text {
+    order: 1;
+    text-align: center;
+    max-width: 640px;
+  }
+  #encante .encante-image {
+    order: 2;
+    width: 100%;
+    justify-content: center !important;
+  }
+  #encante .arch {
+    width: min(360px, 90vw) !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 999px !important;
+  }
+}
+
+/* Você vs você section (texto em cima no mobile) */
+#voce .voce-grid {
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+}
+@media (max-width: 960px) {
+  #voce .voce-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+  }
+  #voce .voce-text {
+    order: 1;
+    text-align: center;
+    max-width: 640px;
+  }
+  #voce .voce-image {
+    order: 2;
+    width: 100%;
+    justify-content: center !important;
+  }
+  #voce .arch {
+    width: min(360px, 90vw) !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 999px !important;
+  }
 }
