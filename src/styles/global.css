@@ -47,8 +47,14 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(44px, 5vw, 82px);
   letter-spacing: -0.02em;
   line-height: 0.95;
+  white-space: nowrap;
   margin: 0;
   font-weight: 800;
+}
+@media (max-width: 600px) {
+  .h1 {
+    white-space: normal;
+  }
 }
 
 .h2 {
@@ -241,7 +247,7 @@ a { color: inherit; text-decoration: none; }
 .reveal {
   opacity: 0;
   transform: translateY(20px) scale(0.99);
-  transition: opacity 0.45s cubic-bezier(.25, .9, .3, 1), transform 0.45s cubic-bezier(.25, .9, .3, 1);
+  transition: opacity 0.55s cubic-bezier(.25, .9, .3, 1), transform 0.55s cubic-bezier(.25, .9, .3, 1);
   will-change: opacity, transform;
 }
 .reveal.is-visible {
@@ -252,7 +258,7 @@ a { color: inherit; text-decoration: none; }
 .reveal-text {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.4s cubic-bezier(.25, .9, .3, 1), transform 0.4s cubic-bezier(.25, .9, .3, 1);
+  transition: opacity 0.55s cubic-bezier(.25, .9, .3, 1), transform 0.55s cubic-bezier(.25, .9, .3, 1);
 }
 .reveal-text.is-visible {
   opacity: 1;
@@ -261,8 +267,8 @@ a { color: inherit; text-decoration: none; }
 
 .reveal-image {
   opacity: 0;
-  transform: scale(0.94) rotate(-1.2deg);
-  transition: opacity 0.9s cubic-bezier(.25, .9, .3, 1), transform 0.9s cubic-bezier(.25, .9, .3, 1);
+  transform: scale(0.96) rotate(-1deg);
+  transition: opacity 0.7s cubic-bezier(.25, .9, .3, 1), transform 0.7s cubic-bezier(.25, .9, .3, 1);
 }
 .reveal-image.is-visible {
   opacity: 1;

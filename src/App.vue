@@ -154,7 +154,7 @@
         <h2 class="h2" style="color:#3d3133">Competências</h2>
 
         <div class="services-grid">
-          <v-card v-for="(s, i) in services" :key="i" class="pa-5" variant="flat"
+          <v-card v-for="(s, i) in services" :key="i" class="pa-5 rounded-lg" variant="flat"
             style="border:1px solid rgba(61,49,51,.10)">
             <div class="d-flex ga-3 align-start">
               <i :class="['mdi', s.icon, 'service-icon']"></i>
@@ -295,8 +295,8 @@ export default {
     this.$nextTick(() => {
       const revealables = document.querySelectorAll('.reveal, .reveal-text, .reveal-image');
       revealables.forEach((el, idx) => {
-        const baseDelay = Math.min(idx * 60, 240);
-        const extra = el.classList.contains('reveal-image') ? 120 : 0;
+        const baseDelay = Math.min(idx * 70, 280);
+        const extra = el.classList.contains('reveal-image') ? 80 : 0;
         el.style.transitionDelay = `${baseDelay + extra}ms`;
         observer.observe(el);
       });
