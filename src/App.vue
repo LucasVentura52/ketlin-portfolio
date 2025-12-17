@@ -54,12 +54,6 @@
               usar minha visão
               para conectar marcas e pessoas com verdade, beleza e propósito.
             </p>
-
-            <!-- <div class="btnrow">
-              <v-btn color="secondary" variant="tonal" size="large" href="#cta" prepend-icon="mdi-rocket-launch-outline">
-                Vamos fechar uma parceria?
-              </v-btn>
-            </div> -->
           </div>
 
           <div class="d-flex justify-center justify-md-end sobre-image reveal-image" style="position:relative">
@@ -168,6 +162,27 @@
       </div>
     </section>
 
+    <!-- BANNER (PARCERIA) -->
+    <section id="parceria" class="section reveal" style="background:#f0ded5">
+      <div class="container">
+        <div class="parceria-banner">
+          <svg class="parceria-banner__rays" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M60 10 L60 34" />
+            <path d="M36 16 L48 36" />
+            <path d="M20 34 L40 48" />
+            <path d="M14 60 L38 60" />
+          </svg>
+
+          <div class="parceria-banner__small reveal-text">vamos fechar</div>
+          <div class="parceria-banner__big reveal-text">UMA PARCERIA?</div>
+
+          <svg class="parceria-banner__wave" viewBox="0 0 260 90" aria-hidden="true" overflow="visible">
+            <path d="M10 70 C 40 15, 70 15, 100 70 S 160 125, 190 70 S 250 15, 250 70" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
     <!-- PORTFÓLIO (você substitui pelos trabalhos reais) -->
     <!-- <section id="portfolio" class="section" style="background:#f0ded5">
       <div class="container">
@@ -200,24 +215,34 @@
       </div>
     </section> -->
 
-    <!-- CTA FINAL -->
-    <section id="cta" class="section reveal" style="background:#ffffff">
+    <!-- FINAL -->
+    <section id="final" class="section reveal" style="background:#c58a5c">
       <div class="container">
-        <h2 class="h2" style="color:#3d3133">Vamos fechar uma parceria?</h2>
-        <p class="p">Me chama e me conta o que você quer construir com a sua marca.</p>
+        <div class="final-thanks">
+          <svg class="final-thanks__sun reveal-image" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="18" />
+            <path d="M60 8 l8 18 -16 0 z" />
+            <path d="M60 112 l8-18 -16 0 z" />
+            <path d="M8 60 l18-8 0 16 z" />
+            <path d="M112 60 l-18-8 0 16 z" />
+            <path d="M22 22 l18 8 -11 11 z" />
+            <path d="M98 98 l-18-8 11-11 z" />
+            <path d="M98 22 l-18 8 11 11 z" />
+            <path d="M22 98 l18-8 -11-11 z" />
+          </svg>
 
-        <div class="btnrow">
-          <v-btn color="primary" variant="tonal" size="large" :href="whatsUrl" target="_blank" rel="noopener"
-            prepend-icon="mdi-whatsapp">
-            {{ whatsappLabel }}
-          </v-btn>
-          <v-btn variant="tonal" size="large" :href="mailtoUrl" prepend-icon="mdi-email-outline">
-            {{ email }}
-          </v-btn>
-        </div>
+          <div class="final-thanks__title reveal-text">Obrigada!</div>
 
-        <div style="margin-top:36px; opacity:.7">
-          © {{ new Date().getFullYear() }} Ketlin Alencar — Social Media
+          <div class="final-thanks__footer">
+            <svg class="final-thanks__arrow reveal-image" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M10 18 L24 32 L38 18" />
+            </svg>
+            <div class="final-thanks__name reveal-text">Ketlin Alencar</div>
+          </div>
+
+          <div class="final-thanks__copyright">
+            © {{ new Date().getFullYear() }} Ketlin Alencar
+          </div>
         </div>
       </div>
     </section>
