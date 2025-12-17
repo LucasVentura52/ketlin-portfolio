@@ -21,14 +21,14 @@
 
             <div class="contact">
               <div class="iconbox">
-                <v-icon icon="mdi-email-outline" />
+                <v-icon icon="mdi-email-outline" size="22" color="#b36a3c" />
               </div>
               <a :href="mailtoUrl">{{ email }}</a>
             </div>
 
             <div class="contact">
               <div class="iconbox">
-                <v-icon icon="mdi-phone-outline" />
+                <v-icon icon="mdi-phone-outline" size="22" color="#b36a3c" />
               </div>
               <a :href="whatsUrl" target="_blank" rel="noopener">{{ whatsappLabel }}</a>
             </div>
@@ -51,8 +51,8 @@
       <div class="soft-wave"></div>
 
       <div class="container" style="position:relative; z-index:2">
-        <div class="grid-2" style="grid-template-columns: 1.1fr 0.9fr">
-          <div>
+        <div class="grid-2 sobre-grid">
+          <div class="sobre-text">
             <h2 class="h2" style="color:#f0ded5">
               Sobre mim <span style="color:#f7d36a">✨</span>
             </h2>
@@ -62,14 +62,14 @@
               para conectar marcas e pessoas com verdade, beleza e propósito.
             </p>
 
-            <div class="btnrow">
+            <!-- <div class="btnrow">
               <v-btn color="secondary" variant="tonal" size="large" href="#cta" prepend-icon="mdi-rocket-launch-outline">
                 Vamos fechar uma parceria?
               </v-btn>
-            </div>
+            </div> -->
           </div>
 
-          <div class="d-flex justify-center justify-md-end" style="position:relative">
+          <div class="d-flex justify-center justify-md-end sobre-image" style="position:relative">
             <div class="circle">
               <img src="/assets/sobre.jpg" alt="Ketlin" />
             </div>
@@ -148,7 +148,7 @@
       <div class="container">
         <h2 class="h2" style="color:#3d3133">Competências</h2>
 
-        <div style="display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:18px; margin-top:26px;">
+        <div class="services-grid">
           <v-card v-for="(s,i) in services" :key="i" class="pa-5" variant="flat" style="border:1px solid rgba(61,49,51,.10)">
             <div class="d-flex ga-3 align-start">
               <v-icon :icon="s.icon" size="26" color="primary" />
@@ -186,7 +186,7 @@
           >{{ f }}</v-chip>
         </div>
 
-        <div style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px; margin-top:18px;">
+        <div class="portfolio-grid">
           <v-card v-for="(item,i) in filteredPortfolio" :key="i" class="overflow-hidden" style="cursor:pointer" @click="openItem(item)">
             <v-img :src="item.cover" height="220" cover />
             <div class="pa-4">
