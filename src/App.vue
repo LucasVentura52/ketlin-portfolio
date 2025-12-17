@@ -57,12 +57,11 @@
           </div>
 
           <div class="d-flex justify-center justify-md-end sobre-image reveal-image" style="position:relative">
-            <div class="circle">
+            <div class="arch">
               <img src="/assets/sobre.jpg" alt="Ketlin" />
             </div>
             <!-- raios/brilhos simples -->
-            <div
-              style="position:absolute; top:-10px; right:40px; color:white; font-size:46px; font-weight:800; transform:rotate(12deg); opacity:.95;">
+            <div class="posicione-teste">
               ︵︵
             </div>
           </div>
@@ -71,7 +70,7 @@
     </section>
 
     <!-- PÁGINA 3 (POSICIONE) -->
-    <section class="section reveal" style="background:#c58a5c">
+    <section id="posicione" class="section reveal posicione-section" style="background:#c58a5c">
       <div class="container" style="position:relative; z-index:2">
         <div class="grid-2 posicione-grid">
           <div class="posicione-text reveal-text">
@@ -85,13 +84,24 @@
           </div>
 
           <div class="d-flex justify-center justify-md-end posicione-image reveal-image">
-            <div class="arch"
-              style="border-radius:999px 0 0 999px; aspect-ratio: 1.25/1; height: min(520px, 70vh); width: min(560px, 92vw);">
+            <!-- style="border-radius:999px 0 0 999px; aspect-ratio: 1.25/1; height: min(520px, 70vh); width: min(560px, 92vw);" -->
+            <div class="arch">
               <img src="/assets/posicione.jpg" alt="Trabalho" />
             </div>
           </div>
         </div>
       </div>
+      <svg class="posicione-sun" viewBox="0 0 120 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="18" />
+        <path d="M60 8 l8 18 -16 0 z" />
+        <path d="M60 112 l8-18 -16 0 z" />
+        <path d="M8 60 l18-8 0 16 z" />
+        <path d="M112 60 l-18-8 0 16 z" />
+        <path d="M22 22 l18 8 -11 11 z" />
+        <path d="M98 98 l-18-8 11-11 z" />
+        <path d="M98 22 l-18 8 11 11 z" />
+        <path d="M22 98 l18-8 -11-11 z" />
+      </svg>
     </section>
 
     <!-- PÁGINA 4 (ENCANTE) -->
@@ -101,7 +111,7 @@
       <div class="container" style="position:relative; z-index:2">
         <div class="grid-2 encante-grid">
           <div class="d-flex justify-center justify-md-start encante-image reveal-image">
-            <div class="arch" style="border-radius:999px; aspect-ratio: 1/1; width:min(520px, 92vw)">
+            <div class="arch">
               <img src="/assets/encante.jpg" alt="Equipe" />
             </div>
           </div>
@@ -123,12 +133,6 @@
     <section class="section reveal" style="background:#c58a5c">
       <div class="container">
         <div class="grid-2 voce-grid">
-          <div class="d-flex justify-center justify-md-start voce-image reveal-image">
-            <div class="arch" style="border-radius:999px; width:min(520px, 92vw)">
-              <img src="/assets/vocevsvoce.jpg" alt="Você vs você" />
-            </div>
-          </div>
-
           <div class="voce-text reveal-text">
             <h2 class="h2" style="color:#3d3133">
               Seja seu maior sucesso!
@@ -136,6 +140,12 @@
             <div class="subtitle"
               style="letter-spacing:0; text-transform:none; color:#3d3133; opacity:.9; font-size:30px">
               Conquiste público e gere conexão.
+            </div>
+          </div>
+
+          <div class="d-flex justify-center justify-md-start voce-image reveal-image">
+            <div class="arch">
+              <img src="/assets/vocevsvoce.jpg" alt="Você vs você" />
             </div>
           </div>
         </div>
