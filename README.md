@@ -1,4 +1,4 @@
-# Ketlin Portfolio v2
+# Ketlin Portfolio
 Site one-page em Vue 3 + Vuetify, inspirado no PDF de apresentação da Ketlin Alencar. Traz seções hero, sobre, posicionamento, portfólio, CTA final e animações sutis ao rolar.
 
 ## Stack
