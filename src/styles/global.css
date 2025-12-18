@@ -163,10 +163,10 @@ a { color: inherit; text-decoration: none; }
 
 .triangles {
   position: absolute;
-  top: 28px;
-  right: 40px;
-  width: 240px;
-  height: 240px;
+  top: -40px;
+  right: -70px;
+  width: 300px;
+  height: 300px;
   z-index: 0;
   opacity: .55;
 }
@@ -272,6 +272,30 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 780px) {
   .portfolio-grid { grid-template-columns: 1fr; }
+}
+
+/* detalhe canto (Você vs você) */
+.voce-corner {
+  position: absolute;
+  top: -64px;
+  left: -78px;
+  width: 260px;
+  height: 260px;
+  fill: none;
+  stroke: rgba(240, 222, 213, 0.95);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 960px) {
+  .voce-corner {
+    top: -54px;
+    left: -66px;
+    width: 220px;
+    height: 220px;
+  }
 }
 
 /* banner parceria */
@@ -459,6 +483,48 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(0) scale(1);
 }
 
+/* svg reveal (stroke-draw) */
+.reveal .posicione-sun,
+.reveal .voce-corner,
+.reveal .parceria-banner__rays,
+.reveal .parceria-banner__wave,
+.reveal .final-thanks__sun {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(.25, .9, .3, 1);
+}
+
+.reveal.is-visible .posicione-sun,
+.reveal.is-visible .voce-corner,
+.reveal.is-visible .parceria-banner__rays,
+.reveal.is-visible .parceria-banner__wave,
+.reveal.is-visible .final-thanks__sun {
+  opacity: 1;
+}
+
+.reveal .posicione-sun :is(path, circle),
+.reveal .voce-corner :is(path, circle),
+.reveal .parceria-banner__rays :is(path, circle),
+.reveal .parceria-banner__wave :is(path, circle),
+.reveal .final-thanks__sun :is(path, circle),
+.reveal .final-thanks__arrow :is(path, circle) {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+}
+
+.reveal.is-visible .posicione-sun :is(path, circle),
+.reveal.is-visible .voce-corner :is(path, circle),
+.reveal.is-visible .parceria-banner__rays :is(path, circle),
+.reveal.is-visible .parceria-banner__wave :is(path, circle),
+.reveal.is-visible .final-thanks__sun :is(path, circle),
+.reveal.is-visible .final-thanks__arrow :is(path, circle) {
+  animation: svg-draw 0.95s cubic-bezier(.25, .9, .3, 1) forwards;
+}
+
+@keyframes svg-draw {
+  from { stroke-dashoffset: 900; }
+  to { stroke-dashoffset: 0; }
+}
+
 .reveal-text {
   opacity: 0;
   transform: translateY(16px);
@@ -493,6 +559,17 @@ a { color: inherit; text-decoration: none; }
 
   .final-thanks__arrow {
     animation: none;
+  }
+
+  .posicione-sun :is(path, circle),
+  .voce-corner :is(path, circle),
+  .parceria-banner__rays :is(path, circle),
+  .parceria-banner__wave :is(path, circle),
+  .final-thanks__sun :is(path, circle),
+  .final-thanks__arrow :is(path, circle) {
+    animation: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
   }
 }
 
@@ -585,6 +662,31 @@ a { color: inherit; text-decoration: none; }
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
     border-radius: 999px !important;
+  }
+}
+
+.voce-corner{
+  position:absolute;
+  top:-80px;
+  left:-80px;
+  width:300px;
+  height:300px;
+  fill:none;
+  stroke: rgba(240, 222, 213, 0.95);
+  stroke-width: 18;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events:none;
+  z-index:0;
+  opacity:.95;
+}
+@media (max-width: 960px){
+  .voce-corner{
+    top:-66px;
+    left:-50px;
+    width:180px;
+    height:180px;
+    stroke-width: 16;
   }
 }
 

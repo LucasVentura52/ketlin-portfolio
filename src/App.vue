@@ -130,27 +130,47 @@
     </section>
 
     <!-- PÁGINA (VOCÊ VS VOCÊ) como extra do PDF -->
-    <section class="section reveal" style="background:#c58a5c">
-      <div class="container">
-        <div class="grid-2 voce-grid">
-          <div class="voce-text reveal-text">
-            <h2 class="h2" style="color:#3d3133">
-              Seja seu maior sucesso!
-            </h2>
-            <div class="subtitle"
-              style="letter-spacing:0; text-transform:none; color:#3d3133; opacity:.9; font-size:30px">
-              Conquiste público e gere conexão.
-            </div>
-          </div>
+    <!-- PÁGINA (VOCÊ VS VOCÊ) como extra do PDF -->
+<section class="section reveal" style="background:#c58a5c">
+  <!-- detalhe canto superior esquerdo (riscos) -->
+  <svg class="voce-corner" viewBox="0 0 260 260" aria-hidden="true">
+  <!-- 1) pequeno apontando mais pra ESQUERDA -->
+  <path d="M58 92 C 38 88, 24 80, 14 70" />
 
-          <div class="d-flex justify-center justify-md-start voce-image reveal-image">
-            <div class="arch">
-              <img src="/assets/vocevsvoce.jpg" alt="Você vs você" />
-            </div>
-          </div>
+  <!-- 2) pequeno apontando mais pra DIREITA -->
+  <path d="M70 78 C 92 62, 112 48, 132 36" />
+
+  <!-- 3) médio (começa a abrir pro “meio”) -->
+  <path d="M62 120 C 90 98, 118 76, 148 56" />
+
+  <!-- 4) MAIOR (o do meio / principal) -->
+  <path d="M55 160 C 98 128, 145 92, 200 58" />
+
+  <!-- 5) médio/maior (mais “embaixo”, completando o leque) -->
+  <path d="M50 206 C 96 170, 146 132, 206 92" />
+</svg>
+
+
+
+  <div class="container">
+    <div class="grid-2 voce-grid">
+      <div class="voce-text reveal-text">
+        <h2 class="h2" style="color:#3d3133">Seja seu maior sucesso!</h2>
+        <div class="subtitle"
+          style="letter-spacing:0; text-transform:none; color:#3d3133; opacity:.9; font-size:30px">
+          Conquiste público e gere conexão.
         </div>
       </div>
-    </section>
+
+      <div class="d-flex justify-center justify-md-start voce-image reveal-image">
+        <div class="arch">
+          <img src="/assets/vocevsvoce.jpg" alt="Você vs você" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- SERVIÇOS (baseado no PDF) -->
     <section id="servicos" class="section reveal" style="background:#f0ded5">
