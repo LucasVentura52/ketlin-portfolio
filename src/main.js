@@ -5,4 +5,6 @@ import '@mdi/font/css/materialdesignicons.css'
 
 import './styles/global.css'
 
-createApp(App).use(vuetify).mount('#app')
+const app = createApp(App)
+app.use(vuetify)
+app.mount('#app')
