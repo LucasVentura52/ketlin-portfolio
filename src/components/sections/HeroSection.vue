@@ -73,18 +73,8 @@ const mailtoUrl = computed(() => {
 </script>
 
 <style scoped>
-.hero-title {
-  white-space: nowrap;
-}
-
 .hero-subtitle {
   letter-spacing: 0.18em;
   text-transform: lowercase;
-}
-
-@media (max-width: 600px) {
-  .hero-title {
-    white-space: normal;
-  }
 }
 </style>

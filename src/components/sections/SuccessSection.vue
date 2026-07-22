@@ -22,7 +22,7 @@
           </AnimatedText>
           <div
             class="subtitle"
-            style="letter-spacing: 0; text-transform: none; color: var(--color-dark); opacity: 0.9; font-size: 30px"
+            style="letter-spacing: 0; text-transform: none; color: var(--color-dark); opacity: 0.9; font-size: clamp(18px, 3.5vw, 30px)"
           >
             Conquiste público e gere conexão.
           </div>

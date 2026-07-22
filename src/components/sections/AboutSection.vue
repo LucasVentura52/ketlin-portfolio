@@ -72,6 +72,7 @@ import AnimatedText from '../AnimatedText.vue'
     order: 1;
     text-align: center;
     max-width: 640px;
+    padding-bottom: 40px;
   }
 
   .sobre-image {

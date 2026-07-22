@@ -65,4 +65,10 @@ import { services } from '../../data/config.js'
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .service-card {
+    padding: 16px !important;
+  }
+}
 </style>

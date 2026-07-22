@@ -58,12 +58,14 @@
 }
 
 .final-thanks__title {
-  font-size: clamp(56px, 7vw, 120px);
+  font-size: clamp(40px, 7vw, 120px);
   font-weight: 900;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.12em;
   text-transform: none;
   color: var(--color-dark);
   max-width: min(100%, 980px);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .final-thanks__footer {
