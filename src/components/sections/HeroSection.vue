@@ -1,7 +1,7 @@
 <template>
   <section class="section hero" style="background: var(--color-blush)">
-    <div class="blob-top-right"></div>
-    <Squiggle />
+    <div class="blob-top-right hero-blob"></div>
+    <Squiggle class="hero-squiggle" />
 
     <div class="container" style="position: relative; z-index: 2">
       <div class="grid-2">
@@ -33,14 +33,14 @@
 
           <div class="subtitle hero-subtitle">social media</div>
 
-          <div class="contact reveal-text">
+          <div class="contact hero-contact">
             <div class="iconbox">
               <i class="mdi mdi-email-outline contact-icon"></i>
             </div>
             <a :href="mailtoUrl">{{ email }}</a>
           </div>
 
-          <div class="contact reveal-text">
+          <div class="contact hero-contact">
             <div class="iconbox">
               <i class="mdi mdi-phone-outline contact-icon"></i>
             </div>
@@ -76,5 +76,62 @@ const mailtoUrl = computed(() => {
 .hero-subtitle {
   letter-spacing: 0.18em;
   text-transform: lowercase;
+}
+
+.hero-blob {
+  opacity: 0;
+  transform: translate(60px, -60px) scale(0.6) rotate(8deg);
+  animation: blob-enter 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+}
+
+.hero-squiggle {
+  opacity: 0;
+  transform: translate(40px, -30px) scale(0.5) rotate(-20deg);
+  animation: squiggle-enter 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+}
+
+@keyframes blob-enter {
+  to {
+    opacity: 0.95;
+    transform: translate(0, 0) scale(1) rotate(8deg);
+  }
+}
+
+@keyframes squiggle-enter {
+  to {
+    opacity: 0.95;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+.hero-contact {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: hero-fade-in 0.6s cubic-bezier(0.25, 0.9, 0.3, 1) forwards;
+}
+
+.hero-contact:nth-child(1) {
+  animation-delay: 0.8s;
+}
+
+.hero-contact:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes hero-fade-in {
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob,
+  .hero-squiggle,
+  .hero-contact {
+    animation: none;
+    opacity: 0.95;
+    transform: none;
+  }
 }
 </style>

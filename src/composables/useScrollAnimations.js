@@ -53,13 +53,14 @@ export function useScrollAnimations() {
       })
 
       gsap.utils.toArray('.reveal-stagger').forEach((container) => {
-        const children = container.children
+        const children = Array.from(container.children)
         gsap.from(children, {
-          y: 28,
+          y: 40,
           opacity: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: 'power2.out',
+          scale: 0.95,
+          duration: 0.7,
+          stagger: 0.08,
+          ease: 'back.out(1.4)',
           scrollTrigger: {
             trigger: container,
             start: 'top 85%',

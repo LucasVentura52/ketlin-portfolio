@@ -49,15 +49,25 @@ import { services } from '../../data/config.js'
   font-size: 26px;
   color: var(--color-caramel);
   display: inline-flex;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .service-card {
-  transition: transform 0.3s cubic-bezier(0.25, 0.9, 0.3, 1), box-shadow 0.3s ease;
+  transition:
+    transform 0.35s cubic-bezier(0.25, 0.9, 0.3, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  border: 1px solid rgba(61, 49, 51, 0.10) !important;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(61, 49, 51, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(61, 49, 51, 0.14);
+  border-color: rgba(197, 138, 92, 0.3) !important;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.2) rotate(-5deg);
 }
 
 @media (max-width: 960px) {

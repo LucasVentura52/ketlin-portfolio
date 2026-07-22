@@ -98,10 +98,10 @@ import AnimatedText from '../AnimatedText.vue'
   }
 
   .posicione-sun {
-    width: 220px;
-    height: 220px;
-    top: -100px;
-    left: -100px;
+    width: 160px;
+    height: 160px;
+    top: -10px;
+    left: -40px;
   }
 }
 </style>

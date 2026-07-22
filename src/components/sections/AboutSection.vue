@@ -61,6 +61,17 @@ import AnimatedText from '../AnimatedText.vue'
   z-index: 1;
 }
 
+.posicione-teste {
+  position: absolute;
+  top: -20px;
+  right: 40px;
+  color: white;
+  font-size: 46px;
+  font-weight: 800;
+  transform: rotate(12deg);
+  opacity: 0.95;
+}
+
 @media (max-width: 960px) {
   .sobre-grid {
     grid-template-columns: 1fr;
@@ -71,14 +82,20 @@ import AnimatedText from '../AnimatedText.vue'
   .sobre-text {
     order: 1;
     text-align: center;
-    max-width: 640px;
-    padding-bottom: 40px;
+    max-width: 100%;
+    padding: 0 8px;
   }
 
   .sobre-image {
     order: 2;
     width: 100%;
     justify-content: center !important;
+  }
+
+  .posicione-teste {
+    top: -40px;
+    right: 10px;
+    font-size: 36px;
   }
 }
 </style>
