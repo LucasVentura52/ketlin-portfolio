@@ -11,11 +11,11 @@
         </template>
       </AnimatedText>
 
-      <div class="services-grid reveal-stagger">
+      <div class="services-grid">
         <v-card
           v-for="(s, i) in services"
           :key="i"
-          class="pa-5 rounded-lg service-card"
+          class="pa-5 rounded-lg service-card reveal"
           variant="flat"
           style="border: 1px solid rgba(61, 49, 51, 0.10)"
         >
@@ -54,7 +54,6 @@ import { services } from '../../data/config.js'
 
 .service-card {
   transition:
-    transform 0.35s cubic-bezier(0.25, 0.9, 0.3, 1),
     box-shadow 0.35s ease,
     border-color 0.35s ease;
   border: 1px solid rgba(61, 49, 51, 0.10) !important;

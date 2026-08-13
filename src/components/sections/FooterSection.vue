@@ -20,7 +20,22 @@
           <svg class="final-thanks__arrow reveal-image" viewBox="0 0 48 48" aria-hidden="true">
             <path d="M10 18 L24 32 L38 18" />
           </svg>
-          <div class="final-thanks__name reveal-text">Ketlin Alencar</div>
+          <a
+            class="final-thanks__name-row"
+            href="https://www.instagram.com/ket_aleencar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de Ketlin Alencar"
+          >
+            <span class="final-thanks__instagram">
+              <svg class="final-thanks__instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4.5" />
+                <circle cx="17.5" cy="6.5" r="1.3" />
+              </svg>
+            </span>
+            <span class="final-thanks__name reveal-text">Ketlin Alencar</span>
+          </a>
         </div>
 
         <div class="final-thanks__copyright">
@@ -72,6 +87,52 @@
   display: grid;
   place-items: center;
   gap: 12px;
+}
+
+.final-thanks__name-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.final-thanks__instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.95;
+}
+
+.final-thanks__name-row:hover,
+.final-thanks__name-row:focus-visible {
+  outline: none;
+}
+
+.final-thanks__name-row:hover .final-thanks__instagram,
+.final-thanks__name-row:focus-visible .final-thanks__instagram {
+  transform: scale(1.12);
+  opacity: 1;
+}
+
+.final-thanks__name {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.final-thanks__name-row:hover .final-thanks__name,
+.final-thanks__name-row:focus-visible .final-thanks__name {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.final-thanks__instagram-icon {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-width: 2;
+  stroke-linejoin: round;
 }
 
 .final-thanks__arrow {
